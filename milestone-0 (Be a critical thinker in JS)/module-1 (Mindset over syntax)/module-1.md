@@ -40,7 +40,38 @@ O(1) → Runs in constant time
 ```
 let x = arr[5];
 ```
+O(n) → Time increases directly linearly with the size of input.
+```
+for (let i = 0; i < n; i++) {
+  console.log(arr[i]);
+}
+```
 
+O(n²) → Time increases rapidly because of nested iterations.
+```
+for (let i = 0; i < n; i++) {
+  for (let j = 0; j < n; j++) {
+    console.log(i, j);
+  }
+}
+```
+
+O(n!) → Time grows extremely fast due to all possible permutations.(Worst Algorithm possible)
+```
+function permute(arr) {
+  if (arr.length === 0) return [[]];
+  let result = [];
+  for (let i = 0; i < arr.length; i++) {
+    let rest = permute(arr.slice(0, i).concat(arr.slice(i + 1)));
+    for (let r of rest) {
+      result.push([arr[i], ...r]);
+    }
+  }
+  return result;
+}
+```
+O(log n) → Time grows slowly as input size increases (reduces problem each step).
+O(n log n) → Time grows slightly faster than linear due to divide-and-combine steps.
 ### Array
 ```js
 const arr = [1, 2, 3];

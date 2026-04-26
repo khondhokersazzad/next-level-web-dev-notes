@@ -36,6 +36,11 @@ Concept: Big O Notation describes how the time or space complexity of an algorit
 
 ## Order of time - tells us the growth rate of an algorithm’s running time .
 
+O(1) → Runs in constant time
+```
+let x = arr[5];
+```
+
 ### Array
 ```js
 const arr = [1, 2, 3];

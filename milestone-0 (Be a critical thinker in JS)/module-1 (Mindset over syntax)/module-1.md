@@ -4,6 +4,9 @@
 
 ##  What I Learned
 - Critical thinking in programming
+- Data Structure
+- Algorithm
+- Big-O Notation
 - Big-O basics
 - Arrays & Set
 
@@ -28,7 +31,10 @@ Concept: DS is the process of arranging data so that app funs fast and efficient
 ### Algorithm
 Concept: Algorithm is the step by step instruction to solve any problem;
 
-Elements of CT
+### Big O Notation
+Concept: Big O Notation describes how the time or space complexity of an algorithm grows as the input size increases, focusing on the worst-case scenario.
+
+## Order of time - tells us the growth rate of an algorithm’s running time .
 
 ### Array
 ```js

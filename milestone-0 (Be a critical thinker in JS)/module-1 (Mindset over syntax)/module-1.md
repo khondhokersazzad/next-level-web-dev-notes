@@ -37,18 +37,18 @@ Concept: Big O Notation describes how the time or space complexity of an algorit
 ## Order of time - tells us the growth rate of an algorithm’s running time .
 
 O(1) → Runs in constant time
-```
+```js
 let x = arr[5];
 ```
 O(n) → Time increases directly linearly with the size of input.
-```
+```js
 for (let i = 0; i < n; i++) {
   console.log(arr[i]);
 }
 ```
 
 O(n²) → Time increases rapidly because of nested iterations.
-```
+```js
 for (let i = 0; i < n; i++) {
   for (let j = 0; j < n; j++) {
     console.log(i, j);
@@ -57,7 +57,7 @@ for (let i = 0; i < n; i++) {
 ```
 
 O(n!) → Time grows extremely fast due to all possible permutations.(Worst Algorithm possible)
-```
+```js
 function permute(arr) {
   if (arr.length === 0) return [[]];
   let result = [];

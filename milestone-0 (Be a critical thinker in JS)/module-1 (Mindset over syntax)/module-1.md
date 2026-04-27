@@ -71,7 +71,11 @@ function permute(arr) {
 }
 ```
 O(log n) → Time grows slowly as input size increases (reduces problem each step).
+
 O(n log n) → Time grows slightly faster than linear due to divide-and-combine steps.
+
+## Most JavaScript array methods run in O(n), except push/pop (O(1)) and sort (O(n log n)).
+
 ### Array
 ```js
 const arr = [1, 2, 3];

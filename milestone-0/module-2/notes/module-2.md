@@ -47,3 +47,11 @@ Some Methods
 - map
 - Spread
 - Flat
+  - Used for Combining nested array into One single array
+- Some 
+  - Checks if any one element pass the checks , if it is then  it stops the checks.
+  - Works for validation, search, permissions.
+  ```js
+  const roles = ["viewer", "editor"];
+  const canEdit = roles.some(role => role === "editor");
+  ```

@@ -3,9 +3,9 @@
 ---
 
 ##  What I Learned
-- Critical thinking in programming
-- Data Structure
-- Algorithm
+- Primitive Data Types
+- Non Primitive Data Types
+- Spread and Rest Operator
 - Big-O Notation
 - Big-O basics
 - Arrays & Set
@@ -14,68 +14,32 @@
 
 ##  Key Concepts
 
-### Critical thinking
-Concept: Critical thinking is something not accepting as it is rather it's about asking question about that particular things.
+### Primitive Data Types
+Concept: Primitive types are the most basic data types that store a single value and are immutable (cannot be changed). They are stored directly in memory (by value).
 
-Elements of CT
-- Knowing about available tools
-- Properly decompose problems into pieces
-- Asking effective questions about the project
-- Watching the big picture
-
+- String
+- Number
+- Boolean
+- Null
+- Undefined
+- Symbol,BigInt
 ---
 
-### DATA STRUCTURE
-Concept: DS is the process of arranging data so that app funs fast and efficient;
+### Non Primitive Data Types
+Concept: Non-primitive types are complex data types that can store multiple values or structures and are stored by reference (not by value).
 
-### Algorithm
-Concept: Algorithm is the step by step instruction to solve any problem;
+- Object, Array, Function
+- Class, Tuple, 
+- Type/ interface
 
-### Big O Notation
+### Spread 
+Concept: used to copy array/obj , combines two array/obj into one.
+```js
+const arr1 = [1, 2, 3];
+const arr2 = [...arr1, 4, 5];
+// [1, 2, 3, 4, 5]
+```
+
+### Rest
 Concept: Big O Notation describes how the time or space complexity of an algorithm grows as the input size increases, focusing on the worst-case scenario.
 
-## Order of time - tells us the growth rate of an algorithm’s running time .
-
-O(1) → Runs in constant time
-```js
-let x = arr[5];
-```
-O(n) → Time increases directly linearly with the size of input.
-```js
-for (let i = 0; i < n; i++) {
-  console.log(arr[i]);
-}
-```
-
-O(n²) → Time increases rapidly because of nested iterations.
-```js
-for (let i = 0; i < n; i++) {
-  for (let j = 0; j < n; j++) {
-    console.log(i, j);
-  }
-}
-```
-
-O(n!) → Time grows extremely fast due to all possible permutations.(Worst Algorithm possible)
-```js
-function permute(arr) {
-  if (arr.length === 0) return [[]];
-  let result = [];
-  for (let i = 0; i < arr.length; i++) {
-    let rest = permute(arr.slice(0, i).concat(arr.slice(i + 1)));
-    for (let r of rest) {
-      result.push([arr[i], ...r]);
-    }
-  }
-  return result;
-}
-```
-O(log n) → Time grows slowly as input size increases (reduces problem each step).
-
-O(n log n) → Time grows slightly faster than linear due to divide-and-combine steps.
-
-## Most JavaScript array methods run in O(n), except push/pop (O(1)) and sort (O(n log n)).
-
-### Array
-```js
-const arr = [1, 2, 3];

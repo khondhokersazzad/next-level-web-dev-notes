@@ -19,7 +19,7 @@ const user = {
 
 const {contact : {email}} = user; //nested destructuring
 
-const {name : userName} = user;
+const {name : userName} = user; //Name alias : explicitely naming a property
 
 console.log({userName,email})
 

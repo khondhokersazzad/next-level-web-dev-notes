@@ -7,6 +7,9 @@
 - Type InterFace
 - Generic Array
 - Enum
+- as const
+- Mapped Types
+-
 
 
 ---

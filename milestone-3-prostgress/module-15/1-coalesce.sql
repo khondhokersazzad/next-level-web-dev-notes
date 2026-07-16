@@ -1,0 +1,1 @@
+select coalesce(email,'not provided') as "Email Address" from employee;

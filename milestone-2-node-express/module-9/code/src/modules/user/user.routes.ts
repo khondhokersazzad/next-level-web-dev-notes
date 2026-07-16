@@ -2,6 +2,7 @@ import { Router, type Request, type Response } from "express";
 import { pool } from "../../db";
 import { userController } from "./user.controller";
 import auth from "../../middleware/auth";
+import { user_roles } from "../../types";
 
 const router = Router();
 
@@ -12,7 +13,7 @@ const router = Router();
 router.post("/", userController.createUser);
 
 //All Users
-router.get("/", auth(), userController.getAllUser);
+router.get("/", auth(user_roles.admin,user_roles.user), userController.getAllUser);
 
 //Single User
 router.get("/:id", userController.getSingleUser);

@@ -3,7 +3,7 @@ import express, {
   type Request,
   type Response,
 } from "express";
-
+import CookieParser from 'cookie-parser'
 import config from "./config/env";
 import { initDB, pool } from "./db";
 import { userRouter } from "./modules/user/user.routes";
@@ -19,7 +19,7 @@ const port = config.port;
 
 
 app.use(express.json());
-
+app.use(CookieParser())
 //Custom MiddleWare
 app.use(logger);
 
